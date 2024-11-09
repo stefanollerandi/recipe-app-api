@@ -16,7 +16,7 @@ class UserAdmin(BaseUserAdmin):
         (
             _('Main information'),
             {
-                'fields':(
+                'fields': (
                     'email',
                     'password')}),
         (
