@@ -302,7 +302,7 @@ class PrivateRecipeAPITests(TestCase):
             'title': 'Cauliflower Tacos',
             'time_minutes': 40,
             'price': Decimal('4.30'),
-            'ingredients': [{'name':'Cauliflower'}, {'name': 'Salt'}],
+            'ingredients': [{'name': 'Cauliflower'}, {'name': 'Salt'}],
         }
         res = self.client.post(RECIPES_URL, payload, format='json')
 
@@ -362,7 +362,7 @@ class PrivateRecipeAPITests(TestCase):
         recipe.ingredients.add(ingredient1)
 
         ingredient2 = Ingredient.objects.create(user=self.user, name='Chili')
-        payload = {'ingredients':[{'name': "Chili"}]}
+        payload = {'ingredients': [{'name': "Chili"}]}
         url = detail_url(recipe.id)
         res = self.client.patch(url, payload, format='json')
 
